@@ -1,0 +1,5 @@
+﻿  MyForm.cpp
+c:\users\kalckhop\documents\visual studio 2017\projects\project1\project1\myform.cpp(6): warning C4829: Möglicherweise falsche Parameter für Main-Funktion. Verwenden Sie eventuell "int main(Platform::Array<Platform::String^>^ args)".
+  MyForm3.cpp
+  Code wird generiert...
+  Project1.vcxproj -> C:\Users\kalckhop\Documents\Visual Studio 2017\Projects\Project1\Debug\Project1.exe
