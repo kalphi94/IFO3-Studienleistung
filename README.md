@@ -2,7 +2,7 @@
 
 Aufteilung:
 
-Eingabe:
-Ausgabe:
-Suchen & ändern:
-Speichern & laden:
+Eingabe: Philipp
+Ausgabe: Julius / Thomas
+Suchen & ändern: Julius / Thomas
+Speichern & laden: Philipp
