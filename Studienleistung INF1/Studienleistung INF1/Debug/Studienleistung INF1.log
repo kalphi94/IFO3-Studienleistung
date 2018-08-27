@@ -1,0 +1,26 @@
+﻿cl : Befehlszeile warning D9025: "/sdl" wird durch "/GS-" überschrieben
+  main.cpp
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(22): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(23): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(25): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(71): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1272): note: Siehe Deklaration von "scanf"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(135): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1272): note: Siehe Deklaration von "scanf"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(144): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(145): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(146): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(147): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: Siehe Deklaration von "fopen"
+c:\users\kalckhop\documents\hs21 unterlagen pk\2. semester\informatik 1\studienleistung inf1\studienleistung inf1\main.cpp(12): warning C4101: "i": Unreferenzierte lokale Variable
+funcsNstructs.obj : warning LNK4075: /EDITANDCONTINUE wird aufgrund der Angabe von /INCREMENTAL:NO ignoriert.
+  Studienleistung INF1.vcxproj -> C:\Users\kalckhop\Documents\HS21 Unterlagen PK\2. Semester\Informatik 1\Studienleistung INF1\Debug\Studienleistung INF1.exe
+  Studienleistung INF1.vcxproj -> C:\Users\kalckhop\Documents\HS21 Unterlagen PK\2. Semester\Informatik 1\Studienleistung INF1\Debug\Studienleistung INF1.pdb (Partial PDB)

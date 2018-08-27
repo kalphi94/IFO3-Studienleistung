@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" version="3.26-05" preRepeat="until " preFor="for" preLeave="leave" postForIn="in" stepFor="by" ignoreCase="true" preForIn="foreach" input="INPUT" preReturn="return" preExit="exit" preWhile="while " output="OUTPUT" postFor="to" author="kalckhop" created="2017-08-18" changedby="kalckhop" changed="2017-08-18" text="&#34;searchMa&#34;" comment="&#34;Mitarbeiterdatenbank durchsuchen&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;Suchwort einlesen&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;Treffer ausgeben&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<repeat text="&#34;until (auswahl = 1;2;0)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qRepeat>
+				<case text="&#34;auswahl&#34;,&#34;1. Ändern&#34;,&#34;2. Löschen&#34;,&#34;default&#34;" comment="" color="ffffff" disabled="0">
+					<qCase>
+						<instruction text="&#34;zu ändernde&#34;,&#34;Mitarbeiternummer einlesen&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<call text="&#34;eingabeAbt&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></call>
+					</qCase>
+					<qCase>
+						<instruction text="&#34;zu löschende&#34;,&#34;Mitarbeiternummer einlesen&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;Mitarbeiter löschen&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qCase>
+					<qCase>
+						<instruction text="&#34;ungültige Eingabe&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qCase>
+				</case>
+			</qRepeat>
+		</repeat>
+	</children>
+</root>

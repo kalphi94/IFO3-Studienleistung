@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" version="3.26-05" preRepeat="until " preFor="for" preLeave="leave" postForIn="in" stepFor="by" ignoreCase="true" preForIn="foreach" input="INPUT" preReturn="return" preExit="exit" preWhile="while " output="OUTPUT" postFor="to" author="kalckhop" created="2017-07-07" changedby="kalckhop" changed="2017-08-18" text="&#34;Mitarbeiterverwaltung der Firma Daddeldu Enterprise Ltd.&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;Variablen definieren&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;Datensätze laden&#34;" comment="&#34;Sofern Datensätze in dem vorhergesehen Platz existieren, diese Laden und in den Variablen speichern.&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<repeat text="&#34;until (auswahl != 0)&#34;" comment="&#34;Solange Befehle zur Ausführung entgegen nehmen, bis das Programm beendet werden soll.&#34;" color="ffffff" disabled="0">
+			<qRepeat>
+				<case text="&#34;auswahl&#34;,&#34;1. Mitarbeiter eintragen&#34;,&#34;2. Abteilung eintragen&#34;,&#34;3. Abteilungsleiter eintragen&#34;,&#34;4. Mitarbeiterliste ausgeben&#34;,&#34;5. Abteilungsliste ausgeben&#34;,&#34;6. Abteilungsleiterliste ausgeben&#34;,&#34;7. Datensatz suchen&#34;,&#34;8. Daten speichern&#34;,&#34;9. Datenbank laden&#34;,&#34;default&#34;" comment="&#34;Menüsteuerung&#34;" color="ffffff" disabled="0">
+					<qCase>
+						<alternative text="&#34;Mitarbeiterindex &#60; maximale Mitarbeiterzahl&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<alternative text="&#34;Abteilungsindex == 0&#34;" comment="&#34;Prüfen ob bereits eine Abteilung existiert, die für den Mitarbeiter eingetragen werden kann.&#34;" color="ffffff" disabled="0">
+									<qTrue>
+										<instruction text="&#34;Keine Abteilung vorhanden&#34;" comment="&#34;Dem Benutzer mitteilen, dass diese Option noch nicht möglich ist&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qTrue>
+									<qFalse>
+										<call text="&#34;eingabeMa&#34;" comment="&#34;Mitarbeitereingabe Funktion aufrufen&#34;" color="ffffff" disabled="0"></call>
+										<instruction text="&#34;Mitarbeiterindex++&#34;" comment="&#34;Mitarbeiterindex inkrementieren&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qFalse>
+								</alternative>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;Maximale Mitarbeiterzahl erreicht&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qCase>
+					<qCase>
+						<alternative text="&#34;Abteilungsindex &#60; maximale Abteilungszahl&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<call text="&#34;eingabeAbt&#34;" comment="&#34;Abteilungseingabe Funktion aufrufen.&#34;" color="ffffff" disabled="0"></call>
+								<instruction text="&#34;Abteilungsindex++&#34;" comment="&#34;Abteilungsindex inkrementieren.&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;Maximale Abteilungszahl erreicht&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qCase>
+					<qCase>
+						<alternative text="&#34;Abteilungsleiterindex &#60; maximale Abteilungsleiterzahl&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<alternative text="&#34;Abteilungsindex == 0&#34;" comment="&#34;Prüfen ob bereits eine Abteilung existiert, die für den Mitarbeiter eingetragen werden kann.&#34;" color="ffffff" disabled="0">
+									<qTrue>
+										<instruction text="&#34;Keine Abteilung vorhanden&#34;" comment="&#34;Dem Benutzer mitteilen, dass diese Option noch nicht möglich ist&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qTrue>
+									<qFalse>
+										<call text="&#34;eingabeLtr&#34;" comment="&#34;Leitereingabe Funktion aufrufen.&#34;" color="ffffff" disabled="0"></call>
+										<instruction text="&#34;Mitarbeiterindex++&#34;,&#34;Abteilungsleiterindex++&#34;" comment="&#34;Mitarbeiterindex &amp; Abteilungsleiterindex inkrementieren&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qFalse>
+								</alternative>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;Maximale Abteilungsleiterzahl erreicht&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qCase>
+					<qCase>
+						<for text="&#34;for i &#60;- 0 to Mitarbeiterindex&#34;" comment="&#34;Ausgabe aller Mitarbeiter, bis zum letzen Index Eintrag&#34;" counterVar="i" startValue="0" endValue="Mitarbeiterindex" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+							<qFor>
+								<alternative text="&#34;Abteilungsleiter noch nicht eingetragen&#34;" comment="&#34;Prüfen ob die Abteilung noch keinen Leiter hat&#34;" color="ffffff" disabled="0">
+									<qTrue>
+										<instruction text="&#34;Ausgabe Mitarbeiter ohne Leiter&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qTrue>
+									<qFalse>
+										<instruction text="&#34;Ausgabe Mitarbeiter mit Leiter&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qFalse>
+								</alternative>
+							</qFor>
+						</for>
+					</qCase>
+					<qCase>
+						<for text="&#34;for i &#60;- 0 to Abteilungsindex&#34;" comment="&#34;Ausgabe aller Abteilungen, bis zum letzen Index Eintrag&#34;" counterVar="i" startValue="0" endValue="Abteilungsindex" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+							<qFor>
+								<alternative text="&#34;Abteilungsleiter noch nicht eingetragen&#34;" comment="&#34;Prüfen ob die Abteilung noch keinen Leiter hat&#34;" color="ffffff" disabled="0">
+									<qTrue>
+										<instruction text="&#34;Ausgabe Abteilungen ohne Leiter&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qTrue>
+									<qFalse>
+										<instruction text="&#34;Ausgabe Abteilungen mit Leiter&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qFalse>
+								</alternative>
+							</qFor>
+						</for>
+					</qCase>
+					<qCase>
+						<for text="&#34;for i &#60;- 0 to Abteilungsleiterindex&#34;" comment="&#34;Ausgabe aller Abteilungsleiter, bis zum letzen Index Eintrag&#34;" counterVar="i" startValue="0" endValue="Abteilungsleiterindex" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+							<qFor>
+								<instruction text="&#34;Ausgabe Abteilungsleiter&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFor>
+						</for>
+					</qCase>
+					<qCase>
+						<repeat text="&#34;auswahl != 0;1;2;3&#34;" comment="&#34;Solange fragen was gemacht werden soll, bis die Funktion beendet oder eine Datenbank ausgewählt wurde.&#34;" color="ffffff" disabled="0">
+							<qRepeat>
+								<case text="&#34;auswahl&#34;,&#34;1. Mitarbeiter&#34;,&#34;2. Abteilung&#34;,&#34;3. Abteilungsleiter&#34;,&#34;default&#34;" comment="&#34;Auswahl der Datenbank in der gesucht werden soll.&#34;" color="ffffff" disabled="0">
+									<qCase>
+										<call text="&#34;searchMa&#34;" comment="&#34;Mitarbeiterdatenbank Suchfunktion aufrufen.&#34;" color="ffffff" disabled="0"></call>
+									</qCase>
+									<qCase>
+										<call text="&#34;searchAbt&#34;" comment="&#34;Abteilungsdatenbank Suchfunktion aufrufen.&#34;" color="ffffff" disabled="0"></call>
+									</qCase>
+									<qCase>
+										<call text="&#34;searchLtr&#34;" comment="&#34;Leiterdatenbank Suchfunktion aufrufen.&#34;" color="ffffff" disabled="0"></call>
+									</qCase>
+									<qCase>
+										<instruction text="&#34;ungültige Eingabe&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qCase>
+								</case>
+							</qRepeat>
+						</repeat>
+					</qCase>
+					<qCase>
+						<instruction text="&#34;saveAll&#34;" comment="&#34;Alle Daten speichern&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qCase>
+					<qCase>
+						<instruction text="&#34;Datensätze laden&#34;" comment="&#34;Datensätze laden und in die Variablen schreiben.&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qCase>
+					<qCase>
+						<instruction text="&#34;ungültige Eingabe&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qCase>
+				</case>
+			</qRepeat>
+		</repeat>
+	</children>
+</root>
